@@ -8,6 +8,8 @@ const userInputBar = document.querySelector("#user-input-bar");
 
 promptCounter.classList.add("hidden");
 
+// landingAha.addEventListener("click");
+
 function handleInput() {
   const userInput = document.getElementById("user-input-bar").value;
 

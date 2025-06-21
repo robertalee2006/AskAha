@@ -32,6 +32,16 @@ body {
   left: 44.5vw;
 }
 
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 116ch;
+  }
+}
+
 @keyframes heartbeat {
   0% {
     transform: scale(1);
@@ -64,12 +74,48 @@ body {
   }
 }
 
+#about-btn {
+  position: relative;
+  bottom: 45vh;
+  background: none;
+  border: none;
+  left: 6vw;
+  color: #2d92ff;
+  text-align: center;
+  font-family: "Patrick Hand", cursive;
+  font-size: 26px;
+  font-weight: 400;
+  line-height: normal;
+  font-style: normal;
+  cursor: pointer;
+}
+
+#ask-aha-btn {
+  position: relative;
+  background: none;
+  border: none;
+  bottom: 45vh;
+  left: -6vw;
+  color: #2d92ff;
+  text-align: center;
+  font-family: "Patrick Hand", cursive;
+  font-size: 26px;
+  font-weight: 400;
+  line-height: normal;
+  font-style: normal;
+  cursor: pointer;
+}
+
 .fade-in {
   animation: fade-in 1s linear forwards;
 }
 
 .heartbeat {
   animation: heartbeat 2s linear infinite;
+}
+
+.typing {
+  animation: typing 3s linear forwards;
 }
 
 .fade-out {
@@ -84,8 +130,15 @@ body {
   gap: 20px;
   width: 70vw;
   margin-bottom: 100px;
+  margin-right: 210px;
   flex-shrink: 0;
-  transform: scale(0.9);
+  transform: scale(0.9); /* ✅ this is OK */
+}
+
+.landing-page-container > div {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
 }
 
 /* Heading styles */
@@ -106,6 +159,7 @@ h1 {
   bottom: 10vh;
   width: 200px;
   height: 200px;
+  cursor: pointer;
 }
 
 /* Input area */
@@ -119,7 +173,7 @@ h1 {
   padding-left: 20px;
   border: none;
   outline: none;
-  width: 1100px;
+  width: 1200px;
   box-sizing: border-box;
 }
 
@@ -143,7 +197,7 @@ h1 {
 }
 
 .move-aha-bottom-right {
-  transform: translate(44vw, 37vh);
+  transform: translate(45vw, 37vh) scale(0.7);
 }
 
 .user-input-bar-top {
