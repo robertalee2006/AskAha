@@ -1,0 +1,151 @@
+/* Base styles */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: radial-gradient(50% 50% at 50% 50%, #fff 0%, #e9f3ff 100%);
+  font-family: "Patrick Hand", cursive;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+/* Ensure consistent font styling */
+.patrick-hand-regular {
+  font-family: "Patrick Hand", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#prompt-counter {
+  position: relative;
+  margin: -50px;
+  width: 170px;
+  height: 170px;
+  border-radius: 30px;
+  background: #70b5ff;
+  bottom: 23.5vh;
+  left: 44.5vw;
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fade-in 1s linear forwards;
+}
+
+.heartbeat {
+  animation: heartbeat 2s linear infinite;
+}
+
+.fade-out {
+  animation: fade-out 0.5s linear forwards;
+}
+
+/* Landing page layout */
+.landing-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 70vw;
+  margin-bottom: 100px;
+  flex-shrink: 0;
+  transform: scale(0.9);
+}
+
+/* Heading styles */
+h1 {
+  align-self: stretch;
+  margin-bottom: -10px;
+  color: #2d92ff;
+  text-align: center;
+  font-size: 96px;
+  font-weight: 400;
+  line-height: normal;
+  font-style: normal;
+}
+
+/* Logo/image */
+#aha-landing-page {
+  position: relative;
+  bottom: 10vh;
+  width: 200px;
+  height: 200px;
+}
+
+/* Input area */
+#user-input-bar {
+  font-family: "Patrick Hand", cursive;
+  font-size: 26px;
+  color: white;
+  background-color: #70b5ff;
+  height: 70px;
+  border-radius: 30px;
+  padding-left: 20px;
+  border: none;
+  outline: none;
+  width: 1100px;
+  box-sizing: border-box;
+}
+
+#user-input-bar::placeholder,
+#prompt-counter-text {
+  font-family: "Patrick Hand", cursive;
+  font-size: 24px;
+  color: rgba(244, 244, 244, 0.7); /* optional softer placeholder */
+}
+
+#prompt-counter {
+  padding: 10px;
+  justify-items: center;
+}
+
+/* this is the proper way to animate relatively. */
+
+#aha-landing-page,
+#user-input-bar {
+  transition: transform 1s ease-in-out;
+}
+
+.move-aha-bottom-right {
+  transform: translate(44vw, 37vh);
+}
+
+.user-input-bar-top {
+  transform: translate(-10vw, -70.5vh);
+}
